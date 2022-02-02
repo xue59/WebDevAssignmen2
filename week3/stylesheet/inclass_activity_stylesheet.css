@@ -1,13 +1,12 @@
-*{
+body{
     background-color: rgb(231, 225, 214);
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
 
 header {
     text-align: center;
     border-bottom: 2px dotted rgb(72,61,139);
-    margin-top: 5px;
     padding-bottom: 5px;
 }
 
@@ -17,7 +16,7 @@ h1 {
     size: 2.2em;
 }
 
-#first-paragraph {
+#job-title {
     font-weight:bold;
 }
 
