@@ -19,18 +19,31 @@ h1 {
     font-weight:bold;
 }
 
-.experience, .education{
+.experience, 
+.education{
     border-style: dashed;
     border-width: 2px;
+    border-color: #ca783e;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-color: #ca783e;
 }
 
-header a + a:hover{
+a[href*="github"]:hover{
     color:crimson;
+}
+
+header a + a{
+    margin-left: 20px;
 }
 
 section h2::first-letter{
     font-size: 3rem;
+}
+
+.education .school-degree > li:first-child{
+    font-style: italic;
+}
+
+.skills li{
+    list-style-type: none;
 }
