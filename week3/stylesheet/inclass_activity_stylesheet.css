@@ -1,4 +1,31 @@
 *{
     background-color: rgb(231, 225, 214);
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px dotted rgb(72,61,139);
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    color:#1050aa; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    size: 2.2em;
+}
+
+#first-paragraph {
+    font-weight:bold;
+}
+
+.experience, .education{
+    border-style: dashed;
+    border-width: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: #ca783e;
 }
 
