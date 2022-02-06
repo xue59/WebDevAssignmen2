@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(231, 225, 214);
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px dotted rgb(72,61,139);
+    padding-bottom: 5px;
+}
+
+h1 {
+    color:#1050aa; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    size: 2.2em;
+}
+
+#job-title {
+    font-weight:bold;
+}
+
+.experience, 
+.education{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #ca783e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a[href*="github"]:hover{
+    color:crimson;
+}
+
+header a + a{
+    margin-left: 20px;
+}
+
+section h2::first-letter{
+    font-size: 3rem;
+}
+
+.education .school-degree > li:first-child{
+    font-style: italic;
+}
+
+.skills li{
+    list-style-type: none;
+}
