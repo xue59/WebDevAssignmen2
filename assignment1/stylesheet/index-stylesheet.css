@@ -2,7 +2,7 @@ body {
     margin: auto;
     align-items: center;
     font-family: "Roboto", sans-serif;
-    background-image: url('../image/yellow_curve_img.jpg');
+    background-image: url('../images/yellow_curve_img.jpg');
     background-size: 100% 100%;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -13,7 +13,6 @@ header {
     border-bottom: 2px solid rgb(72,61,139);
     padding-bottom: 5px;
     background-color: rgb(49, 195, 253);
-    
     text-align: center;
     margin: 0px auto;
     position:fixed;
