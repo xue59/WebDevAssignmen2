@@ -92,6 +92,7 @@ a:link {
     border-width: 2px;
     display: inline-block;
     margin-bottom: 20px;
+    list-style-type: circle;
 }
 
 h1, h2, h3 {
