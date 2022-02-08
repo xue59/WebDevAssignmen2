@@ -22,16 +22,18 @@ header {
 
 footer {
     text-align: center;
-    
+    width: 80%;
     border-top: 2px dotted rgb(72,61,139);
     padding-bottom: 5px;
     background-color: rgba(3, 179, 248,0.65);
     border-radius:5mm;
+    margin: auto;
 }
 
+
 .nav-bar > a{
-    font-weight: bold;
-    font-size: x-large;
+    font-weight: bolder;
+    font-size: xx-large;
     padding-right: 50px;
 }
 
@@ -61,6 +63,7 @@ figure {
     padding: 5px;
     max-width: 220px;
     margin: auto;
+    margin-bottom: 10px;
 }
 figcaption {
     background-color: #222;
@@ -88,6 +91,11 @@ a:link {
     border-color: red;
     border-width: 2px;
     display: inline-block;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-weight:bold;
 }
 
 .class-description-grade li:first-child {
@@ -95,8 +103,10 @@ a:link {
     font-style:italic;
 }
 
-
-h1, h2, h3 {
-    font-weight:bold;
+.class-title + li{
+    list-style-type: none;
 }
+
+
+
 
