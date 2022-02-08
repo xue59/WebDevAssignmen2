@@ -108,6 +108,12 @@ h1, h2, h3 {
     list-style-type: none;
 }
 
+.footer-github-logo img, 
+.footer-email-logo img {
+    width: 50px;
+    height: auto;
+}
+
 
 
 
