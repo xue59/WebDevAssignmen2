@@ -1,3 +1,60 @@
+body {
+    margin: auto;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    background-image: url('../image/yellow_curve_img.jpg');
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+header {
+    border-top: 2px solid rgb(72,61,139);
+    border-bottom: 2px solid rgb(72,61,139);
+    padding-bottom: 5px;
+    background-color: rgb(49, 195, 253);
+    
+    text-align: center;
+    margin: 0px auto;
+    position:fixed;
+    width: 100vw;
+    border-radius:5mm;
+}
+
+footer {
+    text-align: center;
+    
+    border-top: 2px dotted rgb(72,61,139);
+    padding-bottom: 5px;
+    background-color: rgba(3, 179, 248,0.65);
+    border-radius:5mm;
+}
+
+.nav-bar > a{
+    font-weight: bold;
+    font-size: x-large;
+    padding-right: 50px;
+}
+
+.headner-inline-logo{
+    max-height: 20px;
+    width: auto;
+}
+
+main {
+    padding-top: 200px;
+    width:80vw;
+    margin: auto;
+}
+
+
+
+.neulogo {
+    max-width: 50%;
+    height: auto;
+    margin-top: 0;
+}
+
 figure {
     border: thin #c0c0c0 solid;
     display: flex;
@@ -6,9 +63,6 @@ figure {
     max-width: 220px;
     margin: auto;
 }
-
-
-
 figcaption {
     background-color: #222;
     color: #fff;
@@ -16,3 +70,34 @@ figcaption {
     padding: 3px;
     text-align: center;
 }
+
+a:visited {
+    color: red;
+}
+
+a:link {
+    color: pink;
+}
+
+.class-title,
+.hobby-name {
+    text-decoration: underline;
+}
+
+.grade-display {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    display: inline-block;
+}
+
+.class-description-grade li:first-child {
+    display: inline;
+    font-style:italic;
+}
+
+
+h1, h2, h3 {
+    font-weight:bold;
+}
+
