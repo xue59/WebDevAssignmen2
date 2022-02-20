@@ -1,0 +1,196 @@
+commit 1c84fe0889470d0c2d9047be285f36eacf47f2fe
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 23:06:32 2022 -0500
+
+    fix footer icon and neu open in new tab
+
+commit 92690c08f38fae3a6b163596a8b4c157feb58b06
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 22:52:06 2022 -0500
+
+    fix footer icon
+
+commit 619d8ae298e5544c6b3b29a57c62c24fcec2ebe4
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 22:22:51 2022 -0500
+
+    fix minor issue with css grade display
+
+commit bdd7d18f68f308f0cd4d718915c8f166a4dfca5d
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 22:18:34 2022 -0500
+
+    fix html validation issue for index education hobbies
+
+commit b87cfd3694991bd10525b19e63415f3588cb24c3
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 21:39:34 2022 -0500
+
+    remove unneeded html
+
+commit e506d6f81415a1c23f67e1e01e21770f1067bcb6
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 21:38:19 2022 -0500
+
+    fix images folder naming
+
+commit 3eda0c980b359f37808f265e01a76069f269882a
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 21:36:21 2022 -0500
+
+    finish css
+
+commit 20866c1dbb3edaeb1a77d8f79b8f3b1e2e99c183
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 16:41:49 2022 -0500
+
+    complete html
+
+commit cbc1888ffb0aa1df2f6703a06b0f6266f9df8ab9
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Mon Feb 7 16:32:29 2022 -0500
+
+    complete html with about me / education / hobbies, need working on css
+
+commit f8984ddaf04a876f72c396a3a16ed4b74c67938b
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 19:16:52 2022 -0500
+
+    add nav bar need add html
+
+commit 868edbe735b01bb9e9c5f718580dcb5ea40d7d11
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 18:09:57 2022 -0500
+
+    init index file
+
+commit 6ded43ddc7503a06d013811968dcc77b22f3a89c
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 17:58:50 2022 -0500
+
+    delete week3 folder in assgmnent1
+
+commit 7614d8daa1d014faede8a67b8d86185e05fe8eb9
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 17:55:58 2022 -0500
+
+    init assignment1 with img stylesheet video folder
+
+commit 4fab25a930f0c853de3ffac6d63fa9c7dc92c1ad
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 17:51:15 2022 -0500
+
+    init assignemnt1
+
+commit 3f784a726455776de8668987f21eb09aa703410b
+Author: Zack Xue <zackxue@Zacks-MacBook-Pro-14inch.local>
+Date:   Sun Feb 6 17:47:11 2022 -0500
+
+    ds store change
+
+commit b25a9df4357b6b094d5588b085ac22592dad684c
+Merge: a6b5ecc 99f4e94
+Author: haowenxue59 <xue.haow@northeastern.edu>
+Date:   Sun Feb 6 16:12:08 2022 -0500
+
+    Merge pull request #2 from haowenxue59/week3
+    
+    Week3 in-class activity done!
+
+commit 99f4e947658fe8e0e797206816d4937b4084a5ae
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Wed Feb 2 01:29:13 2022 -0500
+
+    complete 3rd activity
+
+commit abdcd14c336d2fe9e2a04c5b992522abf43f6694
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Wed Feb 2 00:57:19 2022 -0500
+
+    complete 2nd activity
+
+commit 6077df28fe329e9ac0c896d4ac0436e65e3b1d80
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Wed Feb 2 00:33:38 2022 -0500
+
+    fix bug in 1st activity
+
+commit 427e9e23cb840a7f7ab6403530cfba70977b6347
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Wed Feb 2 00:23:14 2022 -0500
+
+    finish 1st activity
+
+commit 351b723db4cc264529041fc374c47472fbe9d31c
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Feb 1 23:22:55 2022 -0500
+
+    add background color for the whole page
+
+commit 741f938ff87eeadd5b511d697477572ee9e49221
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Feb 1 23:14:52 2022 -0500
+
+    initial index file & css file.
+
+commit 3f245ebd7a8833585cc5ecee57543cdbdc6be6c2
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Sat Jan 29 20:02:34 2022 -0500
+
+    add <section> in html
+
+commit ad96712c36c75dcea638805ef193a6ee52c943ad
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Sat Jan 29 19:28:32 2022 -0500
+
+    commit
+
+commit 874b5cb0653294074b4c98b8ad3f4f1d2e911120
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 20:28:03 2022 -0500
+
+    add h5 img and hyperlinks
+
+commit ccfa4afa9640c6c736b4f8a191db61a92d4b9eda
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 20:13:51 2022 -0500
+
+    add href to html element
+
+commit 893dcec6cef7653a200f3e47cd6b353d9ec73c0e
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 20:08:29 2022 -0500
+
+    3rd commit with . added
+
+commit 45e43863cc32d71596d3be869ecd44a67d613f87
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 19:59:19 2022 -0500
+
+    2nd commit test
+
+commit 265da8a48176361fa3ce9c2da0ff9ea4aca2f85b
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 19:54:51 2022 -0500
+
+    add lan
+
+commit c9b65d58927340efcb9691138410d9a7333484a4
+Author: Haowen Xue <haowenxue59@outlook.com>
+Date:   Tue Jan 25 19:49:55 2022 -0500
+
+    test commit first
+
+commit a6b5eccadf086e4bacb9781f7a6db8d54afaa33d
+Author: haowenxue59 <xue.haow@northeastern.edu>
+Date:   Tue Jan 25 02:11:28 2022 -0500
+
+    Update README.md
+    
+    1st commit
+
+commit ab2572ea932bdd3af3c174fa6c5b82c90013484a
+Author: haowenxue59 <xue.haow@northeastern.edu>
+Date:   Tue Jan 25 02:10:29 2022 -0500
+
+    Initial commit
