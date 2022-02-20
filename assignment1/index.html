@@ -9,20 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
     rel="stylesheet">
-    <!-- adding tab icon -->
     <link rel="icon" href="images/tennis-icon.ico">
+    <script defer src="scripts/main.js"></script>
+
 </head>
 
 <body>
     <header>
         <section class="date-time-section">
             <div class="date-time-btn">
-                <input type="radio" name="date-btn" id="date" value="date">
-                <label for="date">Date</label>
-                <input type="radio" name="time-btn" id="time" value="time">
-                <label for="time">Time</label>
+                <input type="radio" name="time-date-btn" id="date" value="date">
+                <label for="time-date-btn">Date</label>
+                <input type="radio" name="time-date-btn" id="time" value="time">
+                <label for="time-date-btn">Time</label>
             </div>
-            <p>Display the date and time</p>
+            <p id="time-display">Select to display the date and time</p>
         </section>
         
 
