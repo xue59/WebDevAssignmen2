@@ -30,7 +30,6 @@ footer {
     margin: auto;
 }
 
-
 .nav-bar > a{
     font-weight: bolder;
     font-size: xx-large;
@@ -115,6 +114,16 @@ h1, h2, h3 {
     margin-right: 20px;
 }
 
+.date-time-section{
+    text-align: right;
+    margin-right: 20px;
+    margin-top:10px;
+    margin-bottom: 0;
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+
+}
 
 
 
