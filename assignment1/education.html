@@ -11,10 +11,23 @@
     rel="stylesheet">
     <!-- adding tab icon -->
     <link rel="icon" href="images/tennis-icon.ico">
+    <script defer src="scripts/main.js"></script>
+
 </head>
 
 <body>
     <header>
+        <section class="date-time-section">
+            <div class="date-time-btn">
+                <input type="radio" name="time-date-btn" id="date" value="date">
+                <label for="time-date-btn">Date</label>
+                <input type="radio" name="time-date-btn" id="time" value="time">
+                <label for="time-date-btn">Time</label>
+            </div>
+            <p id="time-display">Select to display the date and time</p>
+        </section>
+        
+
         <h1>Zack-Haowen Xue's Homepage</h1>
         <p class="current-bio">
             Currently a graduate student at Northeastern Univerity - Vancouver Campus, 
