@@ -77,6 +77,65 @@ function displayTimeDate(event){
     }
 }
 
+/*
+function changeThemeBtn2(){
+    //btn.innerText = localStorage.getItem("buttonText")? localStorage.getItem("buttonText") : "Change to Light Mode";
+    //let btn=document.querySelector(".theme-switch-button")
+    btn.addEventListener('click', function(){
+        if (btn.textContent === "Change to Dark Mode") {
+            btn.textContent = "Change to Light Mode";
+            //localStorage.setItem("buttonText", "Change to Light Mode");
+        } else {
+            btn.textContent = "Change to Dark Mode";
+            //localStorage.setItem("buttonText", "Change to Dark Mode");
+        }
+    });
+} */
+
+// following for change theme & store local theme preference 
+function changeThemeBtn_helper(){
+    if (localStorage.getItem("buttonText") != undefined){
+        console.log('local is defined as ', localStorage.getItem("buttonText"))
+        if (localStorage.getItem("buttonText") === 'Change to Dark Mode'){
+            body.classList.remove("body-dark-mode");
+            main.classList.remove("main-dark-mode");
+        } else{
+            btn.innerText = localStorage.getItem("buttonText");
+            body.classList.add("body-dark-mode");
+            main.classList.add("main-dark-mode");
+        }
+    }else{
+        console.log('local NOT defined')
+        btn.innerText = "Change to Dark Mode";
+        body.classList.remove("body-dark-mode");
+        main.classList.remove("main-dark-mode");
+    }
+}
+function changeThemeBtn(event){
+    if (btn.textContent === "Change to Dark Mode") {
+        btn.textContent = "Change to Light Mode";
+        localStorage.setItem("buttonText", "Change to Light Mode");
+        body.classList.add("body-dark-mode");
+        main.classList.add("main-dark-mode");
+
+    } else {
+        btn.textContent = "Change to Dark Mode";
+        localStorage.setItem("buttonText", "Change to Dark Mode");
+        body.classList.remove("body-dark-mode");
+        main.classList.remove("main-dark-mode");
+    }
+}
+
+const btn=document.querySelector(".theme-switch-button")
+btn.addEventListener("click", changeThemeBtn);
+const body=document.querySelector("body");
+const main=document.querySelector("main");
+changeThemeBtn_helper();
+
+
+
+
+
 
 
 

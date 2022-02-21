@@ -8,6 +8,21 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    padding-top: 200px;
+    width:80vw;
+    margin: auto;
+}
+
+.main-dark-mode{
+    color:#c0c0c0;
+}
+
+.body-dark-mode {
+    background-image: url('../images/hello_yellow_dark.jpg');
+}
+
+
 header {
     border-top: 2px solid rgb(72,61,139);
     border-bottom: 2px solid rgb(72,61,139);
@@ -40,14 +55,6 @@ footer {
     max-height: 20px;
     width: auto;
 }
-
-main {
-    padding-top: 200px;
-    width:80vw;
-    margin: auto;
-}
-
-
 
 .neulogo {
     max-width: 50%;
@@ -122,6 +129,13 @@ h1, h2, h3 {
     border-color: red;
     border-width: 2px;
     border-style: solid;    
+}
+
+.theme-switch-section {
+    text-align: right;
+    margin-right: 20px;
+    margin-top:10px;
+    margin-bottom: 0;
 }
 
 
