@@ -49,12 +49,11 @@ function updateDateTime(date_or_time){
     }
 }
 
-
 var glob_timer;
 const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
 const weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const radios=document.querySelectorAll('input[name="time-date-btn"]'); 
-const timer_section = document.querySelector('.date-time-section');
+const timer_section = document.querySelector('.theme-date-time-section');
 
 for(let rad of radios){
     rad.addEventListener('change', displayTimeDate);
@@ -79,28 +78,28 @@ function displayTimeDate(event){
 
 /*
 function changeThemeBtn2(){
-    //btn.innerText = localStorage.getItem("buttonText")? localStorage.getItem("buttonText") : "Change to Light Mode";
+    //btn.innerText = localStorage.getItem("themeBtnText")? localStorage.getItem("themeBtnText") : "Change to Light Mode";
     //let btn=document.querySelector(".theme-switch-button")
     btn.addEventListener('click', function(){
         if (btn.textContent === "Change to Dark Mode") {
             btn.textContent = "Change to Light Mode";
-            //localStorage.setItem("buttonText", "Change to Light Mode");
+            //localStorage.setItem("themeBtnText", "Change to Light Mode");
         } else {
             btn.textContent = "Change to Dark Mode";
-            //localStorage.setItem("buttonText", "Change to Dark Mode");
+            //localStorage.setItem("themeBtnText", "Change to Dark Mode");
         }
     });
 } */
 
 // following for change theme & store local theme preference 
 function changeThemeBtn_helper(){
-    if (localStorage.getItem("buttonText") != undefined){
-        console.log('local is defined as ', localStorage.getItem("buttonText"))
-        if (localStorage.getItem("buttonText") === 'Change to Dark Mode'){
+    if (localStorage.getItem("themeBtnText") != undefined){
+        console.log('local is defined as ', localStorage.getItem("themeBtnText"))
+        if (localStorage.getItem("themeBtnText") === 'Change to Dark Mode'){
             body.classList.remove("body-dark-mode");
             main.classList.remove("main-dark-mode");
         } else{
-            btn.innerText = localStorage.getItem("buttonText");
+            btn.innerText = localStorage.getItem("themeBtnText");
             body.classList.add("body-dark-mode");
             main.classList.add("main-dark-mode");
         }
@@ -114,22 +113,22 @@ function changeThemeBtn_helper(){
 function changeThemeBtn(event){
     if (btn.textContent === "Change to Dark Mode") {
         btn.textContent = "Change to Light Mode";
-        localStorage.setItem("buttonText", "Change to Light Mode");
+        localStorage.setItem("themeBtnText", "Change to Light Mode");
         body.classList.add("body-dark-mode");
         main.classList.add("main-dark-mode");
 
     } else {
         btn.textContent = "Change to Dark Mode";
-        localStorage.setItem("buttonText", "Change to Dark Mode");
+        localStorage.setItem("themeBtnText", "Change to Dark Mode");
         body.classList.remove("body-dark-mode");
         main.classList.remove("main-dark-mode");
     }
 }
 
 const btn=document.querySelector(".theme-switch-button")
-btn.addEventListener("click", changeThemeBtn);
 const body=document.querySelector("body");
 const main=document.querySelector("main");
+btn.addEventListener("click", changeThemeBtn);
 changeThemeBtn_helper();
 
 
