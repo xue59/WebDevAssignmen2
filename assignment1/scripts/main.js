@@ -114,6 +114,8 @@ function displayTimeDate_helper(){
     }
 }
 
+
+//
 // following for change theme & store local theme preference 
 function changeThemeBtn_helper(){
     if (localStorage.getItem("themeBtnText") != undefined){
@@ -121,8 +123,10 @@ function changeThemeBtn_helper(){
         if (localStorage.getItem("themeBtnText") === 'Change to Dark Mode'){
             body.classList.remove("body-dark-mode");
             main.classList.remove("main-dark-mode");
+            btn.classList.remove("theme-switch-button-dark")
         } else{
             btn.innerText = localStorage.getItem("themeBtnText");
+            btn.classList.add("theme-switch-button-dark");
             body.classList.add("body-dark-mode");
             main.classList.add("main-dark-mode");
         }
@@ -131,18 +135,22 @@ function changeThemeBtn_helper(){
         btn.innerText = "Change to Dark Mode";
         body.classList.remove("body-dark-mode");
         main.classList.remove("main-dark-mode");
+        btn.classList.remove("theme-switch-button-dark")
+
     }
 }
 function changeThemeBtn(event){
     if (btn.textContent === "Change to Dark Mode") {
         btn.textContent = "Change to Light Mode";
         localStorage.setItem("themeBtnText", "Change to Light Mode");
+        btn.classList.add("theme-switch-button-dark");
         body.classList.add("body-dark-mode");
         main.classList.add("main-dark-mode");
 
     } else {
         btn.textContent = "Change to Dark Mode";
         localStorage.setItem("themeBtnText", "Change to Dark Mode");
+        btn.classList.remove("theme-switch-button-dark")
         body.classList.remove("body-dark-mode");
         main.classList.remove("main-dark-mode");
     }

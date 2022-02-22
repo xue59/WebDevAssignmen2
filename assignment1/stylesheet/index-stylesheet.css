@@ -14,6 +14,24 @@ main {
     margin: auto;
 }
 
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.nav-bar > a{
+    border: solid 2px rgb(205, 238, 231);
+    border-radius: 20px;
+    margin: auto;
+    padding: 5px;
+    font-weight: bolder;
+    font-size: xx-large;
+    background-color: rgb(204, 209, 208);
+}
+
 .main-dark-mode{
     color:#c0c0c0;
 }
@@ -33,6 +51,7 @@ header {
     position:fixed;
     width: 100vw;
     border-radius:5mm;
+    z-index: 2;
 }
 
 footer {
@@ -45,11 +64,6 @@ footer {
     margin: auto;
 }
 
-.nav-bar > a{
-    font-weight: bolder;
-    font-size: xx-large;
-    padding-right: 50px;
-}
 
 .headner-inline-logo{
     max-height: 20px;
@@ -137,12 +151,16 @@ h1, h2, h3 {
     margin: 0;
 }
 
-.theme-switch-section {
+.theme-date-time-section {
     text-align: right;
     margin-right: 20px;
     margin-top:10px;
     margin-bottom: 0;
 }
 
+.theme-switch-button-dark {
+    background-color: #311506;
+    color: #ffcd4f;
+}
 
 
