@@ -1,5 +1,6 @@
 console.log("refer js success!") 
 
+//following function return time in hr:min:secs:AM/PM 
 function getCurrentTime(){
     let time = new Date();
     let hrs=time.getHours();
@@ -16,6 +17,7 @@ function getCurrentTime(){
     return final_time;
 }
 
+//following function return date in format of : week month date year
 function getCurrentDate(){
     let date = new Date();
     let weekday = weekdayNames[date.getDay()].slice(0,3);
@@ -52,17 +54,6 @@ function updateDateTime(date_or_time){
 }
 
 
-/*
-function updateDateTime_helper(date_or_time){
-    if(date_or_time == 'date'){
-        p_td_display.textContent = getCurrentDate();
-        localStorage.setItem("td_selection", "date");
-    } else if (date_or_time == 'time'){
-        p_td_display.textContent = getCurrentTime();
-        localStorage.setItem("td_selection", "time");
-    }
-}*/
-
 //following function & calls set a time/date selector on right corner of the page 
 var glob_timer;
 const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
@@ -74,8 +65,9 @@ for(let rad of radios){
     //console.log("into rads")
     rad.addEventListener('change', displayTimeDate);
 }
-displayTimeDate_helper();
+displayTimeDateBasedOnLocalStorage();
 
+//following function would exacute the click event to display the time and date 
 function displayTimeDate(event){
     //console.log(event)
     clearInterval(glob_timer);
@@ -100,7 +92,7 @@ function displayTimeDate(event){
 }
 //following function is a helper function to read local storage and 
 //select the user's preference of time & date selection
-function displayTimeDate_helper(){
+function displayTimeDateBasedOnLocalStorage(){
     if (localStorage.getItem("td_selection") == "date"){
         const date_btn = document.querySelector('#date');
         date_btn.setAttribute("checked", "checked");
@@ -116,8 +108,9 @@ function displayTimeDate_helper(){
 
 
 //
-// following for change theme & store local theme preference 
-function changeThemeBtn_helper(){
+// following changeThemeBasedOnLocalStorage
+// for change theme based on localstorage of the theme preference
+function changeThemeBasedOnLocalStorage(){
     if (localStorage.getItem("themeBtnText") != undefined){
         console.log('local is defined as ', localStorage.getItem("themeBtnText"))
         if (localStorage.getItem("themeBtnText") === 'Change to Dark Mode'){
@@ -139,20 +132,19 @@ function changeThemeBtn_helper(){
 
     }
 }
+
+//following function would exactuate the click event of the 
+// theme change button and toggle between dark mode or light mode 
 function changeThemeBtn(event){
+    body.classList.toggle('body-dark-mode');
+    main.classList.toggle('main-dark-mode');
+    btn.classList.toggle('theme-switch-button-dark');
     if (btn.textContent === "Change to Dark Mode") {
         btn.textContent = "Change to Light Mode";
-        localStorage.setItem("themeBtnText", "Change to Light Mode");
-        btn.classList.add("theme-switch-button-dark");
-        body.classList.add("body-dark-mode");
-        main.classList.add("main-dark-mode");
-
+        localStorage.setItem("themeBtnText", "Change to Light Mode"); 
     } else {
         btn.textContent = "Change to Dark Mode";
         localStorage.setItem("themeBtnText", "Change to Dark Mode");
-        btn.classList.remove("theme-switch-button-dark")
-        body.classList.remove("body-dark-mode");
-        main.classList.remove("main-dark-mode");
     }
 }
 
@@ -160,4 +152,4 @@ const btn=document.querySelector(".theme-switch-button")
 const body=document.querySelector("body");
 const main=document.querySelector("main");
 btn.addEventListener("click", changeThemeBtn);
-changeThemeBtn_helper();
+changeThemeBasedOnLocalStorage();
