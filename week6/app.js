@@ -31,15 +31,37 @@ console.log(logger.version);
 var express = require('express');
 var app = express();
 
+// run app.js on port 3000
+app.listen(3000, ()=> {console.log('the app is running on port 3000')})
+
 // following are routing method 
-app.get('/', function(reg, res){
+// activity 3
+app.get('/', function(req, res){
     res.send('hello world zkk!');
 });
-app.get('/users', function(req, res){
-    res.send('<h1>This is a list for all my users: </h1>');
-});
-app.get('/users/:name', function(req, res){
-    res.send(`Hello ${req.params.name} welcome to your page`);
+
+// app.get('/users', function(req, res){
+//     res.send('<h1>This is a list for all my users: </h1>');
+// });
+
+// my own test on port 3000 about page 
+app.get('/about', function(req, res){
+    res.send('<h1>About page:1111 </h1>')
 });
 
-app.listen(3000, ()=> {console.log('the app is running on port 3000')})
+//activity 4 
+// app.get('/users/:name/id/:id', function(req, res){
+//     res.send(`Hello ${req.params.name} <p> welcome to your page your ID is: ${req.params.id}</p> `);
+// });
+
+//activity 5 
+app.use(express.static('public'));
+
+//activity 6 
+const users = require('./routes/users.js');
+app.use('/users', users);
+console.log(users);
+
+//activity 7 
+app.set('views', './views'); // all templet goes to view file
+
