@@ -10,7 +10,6 @@
 // .catch((err) => console.log(err))
 
 const logger = require('./logger.js'); 
-
 logger.log();
 console.log(logger.version);
 
@@ -29,9 +28,11 @@ console.log(logger.version);
 
 var express = require('express');
 var app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
 
 // run app.js on port 3000
-app.listen(3000, ()=> {console.log('the app is running on port 3000')})
+// app.listen(3000, ()=> {console.log('the app is running on port 3000')})
 
 // following are routing method 
 // activity 3
@@ -68,7 +69,7 @@ app.set('views', './views'); // all templet goes to view file
 // activity 1 - week7
 
 const fs = require('fs');
-const content ='something content!';
+//const content ='something content!';
 const util = require('util');
 const writePromise = util.promisify(fs.writeFile);
 const readPromise = util.promisify(fs.readFile);
@@ -89,7 +90,17 @@ async function writeReadPromiseAsync(fileName, fileContent){
         console.log(readData)
     }
 }
+writeReadPromiseAsync('message_async.txt', 'This write by a async function! 2nd time!');
 
-writeReadPromiseAsync('message_async.txt', 'This write by a async function!');
+// activity creat insert one
+// const db = require('./db.js');
+// db.dbConnect().then (() => app.listen(3000, () =>{
+//     console.log('app is runing on port 3000 for week7 & connecting to db');
+//     db.saveUser({name:'zack1'});
+// }));
+
+
+
+
 
 

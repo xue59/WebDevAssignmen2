@@ -1,4 +1,5 @@
 const express = require('express');
+const db = require('../db');
 const router  = express.Router();
 
 router.get('/', function(req, res){
@@ -11,4 +12,16 @@ router.get('/:name/id/:id', function(req, res){
     res.render('../views/user.pug', {name:req.params.name});
 });
 
+router.post('/', async function (req, res) {
+    try {
+        const data = req.body;
+        console.log(data);
+        await db.saveUser(data);
+    } catch(err){
+        conslog.log(err);
+    }
+})
+
 module.exports = router;
+
+
