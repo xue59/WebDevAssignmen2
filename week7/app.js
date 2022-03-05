@@ -1,8 +1,8 @@
-const fs = require('fs');
-const content ='something content!';
-const util = require('util');
-const writePromise = util.promisify(fs.writeFile);
-const readPromise = util.promisify(fs.readFile);
+// const fs = require('fs');
+// const content ='something content!';
+// const util = require('util');
+// const writePromise = util.promisify(fs.writeFile);
+// const readPromise = util.promisify(fs.readFile);
 
 // writePromise('message.txt', 'test input helloword')
 // .then(() => readPromise('message.txt', 'utf-8'))
@@ -63,4 +63,33 @@ app.use('/users', users);
 
 //activity 7 
 app.set('views', './views'); // all templet goes to view file
+
+
+// activity 1 - week7
+
+const fs = require('fs');
+const content ='something content!';
+const util = require('util');
+const writePromise = util.promisify(fs.writeFile);
+const readPromise = util.promisify(fs.readFile);
+
+// writePromise('message.txt', 'test input helloword')
+//     .then(() => readPromise('message.txt', 'utf-8'))
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err));
+
+// use aysnc to replace above promise 
+async function writeReadPromiseAsync(fileName, fileContent){
+    try {
+        await writePromise(fileName, fileContent);
+        var readData = await readPromise(fileName, 'utf-8');
+        console.log(readData);
+    }
+    catch(err) {
+        console.log(readData)
+    }
+}
+
+writeReadPromiseAsync('message_async.txt', 'This write by a async function!');
+
 
