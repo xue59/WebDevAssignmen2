@@ -1,38 +1,7 @@
-// const fs = require('fs');
-// const content ='something content!';
-// const util = require('util');
-// const writePromise = util.promisify(fs.writeFile);
-// const readPromise = util.promisify(fs.readFile);
-
-// writePromise('message.txt', 'test input helloword')
-// .then(() => readPromise('message.txt', 'utf-8'))
-// .then((data) => console.log(data))
-// .catch((err) => console.log(err))
-
-const logger = require('./logger.js'); 
-logger.log();
-console.log(logger.version);
-
-//     {
-//     if (err) {
-//       console.error(err)
-//     }
-//     //file written successfully
-//     fs.readFile('test.txt', 'utf-8', (err,data) => {
-//         if (err){console.error(err);}
-//         else{
-//             console.log('readFile success!')
-//         }
-//     }); 
-//   })
-
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
-
-// run app.js on port 3000
-// app.listen(3000, ()=> {console.log('the app is running on port 3000')})
 
 // following are routing method 
 // activity 3
@@ -58,8 +27,8 @@ app.get('/about', function(req, res){
 app.use(express.static('public'));
 
 //activity 6 
-const users = require('./routes/users.js');
-app.use('/users', users);
+// const users = require('./routes/users.js');
+// app.use('/users', users);
 // console.log(users);
 
 //activity 7 
@@ -90,14 +59,25 @@ async function writeReadPromiseAsync(fileName, fileContent){
         console.log(readData)
     }
 }
-writeReadPromiseAsync('message_async.txt', 'This write by a async function! 2nd time!');
+//writeReadPromiseAsync('message_async.txt', 'This write by a async function! 2nd time!');
 
-// activity creat insert one
-// const db = require('./db.js');
-// db.dbConnect().then (() => app.listen(3000, () =>{
-//     console.log('app is runing on port 3000 for week7 & connecting to db');
-//     db.saveUser({name:'zack1'});
-// }));
+// activity 2 connect to mongodb & insert 
+const logger = require('./logger.js'); 
+logger.log();
+console.log(logger.version);
+
+const mydb=require('./db.js');
+
+mydb.connectToZacksMongodb().then(()=> app.listen(3000, ()=>{
+    console.log("app is running on port 3000");
+    //mydb.saveUserToDB({name:'testestzack'});
+}));
+
+//from previous week6 - activity 6 
+const users = require('./routes/users.js');
+app.use('/users', users);
+// console.log(users);
+
 
 
 

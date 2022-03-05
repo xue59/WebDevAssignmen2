@@ -1,5 +1,6 @@
 const express = require('express');
-const db = require('../db');
+const req = require('express/lib/request')
+const db = require('../db.js');
 const router  = express.Router();
 
 router.get('/', function(req, res){
@@ -12,16 +13,17 @@ router.get('/:name/id/:id', function(req, res){
     res.render('../views/user.pug', {name:req.params.name});
 });
 
+//week7 activity-1 POST 
 router.post('/', async function (req, res) {
     try {
         const data = req.body;
-        console.log(data);
-        await db.saveUser(data);
+        //console.log('printing saved user data:\n',data);
+        await db.saveUserToDB(data);
+        res.send("user data saved!");
     } catch(err){
-        conslog.log(err);
+        console.log(err);
     }
 })
-
 module.exports = router;
 
 
