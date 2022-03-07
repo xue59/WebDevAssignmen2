@@ -71,7 +71,9 @@ const mydb=require('./db.js');
 mydb.connectToZacksMongodb().then(()=> app.listen(3000, ()=>{
     console.log("app is running on port 3000");
     //mydb.saveUserToDB({name:'testestzack'});
+    //mydb.findAllUsersInDB();
 }));
+
 
 //from previous week6 - activity 6 
 const users = require('./routes/users.js');
