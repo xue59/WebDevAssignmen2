@@ -1,0 +1,30 @@
+html 
+  head 
+    title= "List of all shopping items" 
+  body 
+    h2 Here is the item you want to change: 
+    form(action=`/updateAnItem/${anItem._id}`, method='post')
+        table(style='width:100%', border='1')
+            tr 
+                th _id
+                th Item name 
+                th Amount 
+                th Price 
+                th Action: 
+            tr 
+                td(class='db_id') #{anItem._id}
+                td 
+                    label(for='itemName')
+                    input(type='text', id='itemName', name='itemName', value=`${anItem.itemName}`)
+                td
+                    label(for='amount')
+                    input(type='text', id='amount', name='amount', value=`${anItem.amount}`)
+                td 
+                    label(for='price')
+                    input(type='text', id='price', name='price', value=`${anItem.price}`)
+                td 
+                    input(type='submit', value="confirmUpdate")
+
+
+                    
+        

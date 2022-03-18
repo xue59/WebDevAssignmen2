@@ -1,0 +1,47 @@
+html 
+  head 
+    title= "List of all shopping items" 
+  body 
+    h2 Please add your shopping item(s): 
+    form(action='/addAnItem', method='post')
+        table(style='width:100%', border='1')
+            tr 
+                th _id
+                th Item name 
+                th Amount 
+                th Price 
+                th Action: 
+            tr 
+                td 
+                td 
+                    label(for='itemName')
+                    input(type='text', id='itemName', name='itemName')
+                td
+                    label(for='amount')
+                    input(type='text', id='amount', name='amount')
+                td 
+                    label(for='price')
+                    input(type='text', id='price', name='price')
+                td 
+                    input(type='submit', value="Add")
+    
+    h1 Here is your current shopping list: 
+        table(style='width:100%', border='1')
+            tr 
+                th _id
+                th Item name 
+                th Amount 
+                th Price 
+                th Action: 
+            for anItem in allItems
+                tr
+                    td #{anItem._id}
+                    td #{anItem.itemName}
+                    td #{anItem.amount} 
+                    td #{anItem.price}
+                    td 
+                        form(action=`/updateAnItem/${anItem._id}`, method='get')
+                            input(type='submit', value="update")
+                        form(action=`/deleteAnItem/${anItem._id}`, method='get')
+                            input(type='submit', value="delete")        
+        
