@@ -7,10 +7,11 @@ html
         table(style='width:100%', border='1')
             tr 
                 th _id
-                th Item name 
+                th Item Name 
                 th Amount 
                 th Price 
-                th Action: 
+                th Notes
+                th(class='action') Action: 
             tr 
                 td(class='db_id') #{anItem._id}
                 td 
@@ -23,8 +24,7 @@ html
                     label(for='price')
                     input(type='text', id='price', name='price', value=`${anItem.price}`)
                 td 
-                    input(type='submit', value="confirmUpdate")
-
-
-                    
-        
+                    label(for='notes')
+                    input(type='text', id='notes', name='notes', value=`${anItem.notes}`)
+                td(class='action') 
+                    input(type='submit', value="Confirm update")

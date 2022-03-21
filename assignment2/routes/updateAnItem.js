@@ -19,7 +19,8 @@ router.post('/:id', async function(req, res){
         let newItem ={
             itemName  : req.body.itemName,
             amount    : req.body.amount,
-            price     : req.body.price
+            price     : req.body.price,
+            notes     : req.body.notes
         };
         const result = await db.updateAnItem(req.params.id, newItem);
         res.redirect("/addAnItem"); // redirect back to users tab

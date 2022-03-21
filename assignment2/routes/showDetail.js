@@ -5,12 +5,13 @@ const router  = express.Router();
 
 router.get('/:id', async function(req, res){
     try{
-        const result = await db.deleteAnItem(req.params.id);
-        res.redirect("/addAnItem"); // redirect back to users tab
+        //console.log(req.params.id)
+        const result = await db.findAnItem(req.params.id);
+        //console.log('find one result: \n', result)
+        res.render("../views/showDetail.pug", anItem=result)
     }catch(err){
         console.log(err);
     }
 });
-
 
 module.exports = router;

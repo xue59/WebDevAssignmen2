@@ -1,18 +1,19 @@
 html 
   head 
     title= "List of all shopping items" 
-  body 
+    style
+        include ../public/stylesheets/style.css
+  body
     h2 Please add your shopping item(s): 
     form(action='/addAnItem', method='post')
         table(style='width:100%', border='1')
             tr 
-                th _id
-                th Item name 
-                th Amount 
-                th Price 
-                th Action: 
+                th(class='additem') Item Name
+                th(class='additem')  Amount 
+                th(class='additem')  Price 
+                th(class='additem')  Notes
+                th(class='additem')  Action: 
             tr 
-                td 
                 td 
                     label(for='itemName')
                     input(type='text', id='itemName', name='itemName')
@@ -23,25 +24,30 @@ html
                     label(for='price')
                     input(type='text', id='price', name='price')
                 td 
+                    label(for='notes')
+                    input(type='text', id='notes', name='notes')
+                td(class='action') 
                     input(type='submit', value="Add")
     
     h1 Here is your current shopping list: 
         table(style='width:100%', border='1')
             tr 
-                th _id
-                th Item name 
+                th Item Name 
                 th Amount 
                 th Price 
-                th Action: 
+                th Notes
+                th(class='action')  Action: 
             for anItem in allItems
                 tr
-                    td #{anItem._id}
                     td #{anItem.itemName}
                     td #{anItem.amount} 
                     td #{anItem.price}
-                    td 
+                    td #{anItem.notes}
+                    td(class='action')  
                         form(action=`/updateAnItem/${anItem._id}`, method='get')
-                            input(type='submit', value="update")
+                            input(type='submit', value="Update")
                         form(action=`/deleteAnItem/${anItem._id}`, method='get')
-                            input(type='submit', value="delete")        
+                            input(type='submit', value="Delete")  
+                        form(action=`/showDetail/${anItem._id}`, method='get')
+                            input(type='submit', value="Show Detail")      
         
