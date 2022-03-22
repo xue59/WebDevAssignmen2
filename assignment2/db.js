@@ -4,6 +4,7 @@ const client = new MongoClient(uri);
 const ObjectID = require('mongodb').ObjectID;
 
 
+//set up the connection
 async function dbConnect() {
     try{
         await client.connect();
@@ -13,15 +14,17 @@ async function dbConnect() {
     }
 }
 
+// add an Item to the DB
 async function addAnItem(anItem){
     try {
         await client.db("assignment2shoppinglist").collection("shoppinglist").insertOne(anItem);
-        console.log('DB Success added: \n', anItem);
+        //console.log('DB Success added: \n', anItem);
     }catch (err){
         console.log(err);
     }
 }
 
+// find all items in the db and return a cursor 
 async function findAllItems(){
     try{
         const allItems = client.db("assignment2shoppinglist").collection("shoppinglist").find({});
@@ -31,6 +34,7 @@ async function findAllItems(){
     }
 }
 
+// find One item in the DB
 async function findAnItem(id){
     try{
         const anItem = client.db("assignment2shoppinglist").collection("shoppinglist").findOne(ObjectID(id));
@@ -40,6 +44,7 @@ async function findAnItem(id){
     }
 }
 
+// update/change an Item in the DB
 async function updateAnItem(id, newItem){
     try{
         //console.log(id,newItem)
@@ -51,6 +56,7 @@ async function updateAnItem(id, newItem){
     }
 }
 
+//remove one Item in the DB
 async function deleteAnItem(id){
     try{
         let myquery = { '_id': ObjectID(id)}
